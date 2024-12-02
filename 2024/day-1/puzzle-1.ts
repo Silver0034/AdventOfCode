@@ -2,7 +2,7 @@
 const inputFile = './input.txt'
 
 // Imports / Dependencies
-import { getValueArraysFromFile } from './utilities'
+import { getColumnsFromInputAsArrays } from './utilities'
 import type { NumberArray } from './utilities'
 
 const sortArrayByValue = (
@@ -19,7 +19,7 @@ const sortArrayByValue = (
 const run = () => {
 	console.log('Day 1: Puzzle 1.')
 	// Get input from text file.
-	const values = getValueArraysFromFile(inputFile)
+	const values = getColumnsFromInputAsArrays(inputFile)
 
 	console.log('Computing answer...')
 

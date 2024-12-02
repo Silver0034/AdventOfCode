@@ -1,6 +1,6 @@
 const inputFile = './input.txt'
 
-import { getValueArraysFromFile } from './utilities'
+import { getColumnsFromInputAsArrays } from './utilities'
 import type { NumberArray } from './utilities'
 
 const returnSimilarityScoreForValue = (
@@ -19,7 +19,7 @@ const run = () => {
 	console.log('Day 1: Puzzle 2.')
 
 	// Get input from text file.
-	const [columnOne, columnTwo] = getValueArraysFromFile(inputFile)
+	const [columnOne, columnTwo] = getColumnsFromInputAsArrays(inputFile)
 
 	console.log('Computing answer...')
 

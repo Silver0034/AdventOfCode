@@ -3,9 +3,14 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"2024:1:1": "npm run 1 --prefix ./2024/1",
-		"2024:1:2": "npm run 2 --prefix ./2024/1"
+		"2024:1:1": "npm run 1 --prefix ./2024/day-1",
+		"2024:1:1:dev": "npm run 1:dev --prefix ./2024/day-1",
+		"2024:1:2": "npm run 2 --prefix ./2024/day-1",
+		"2024:1:2:dev": "npm run 2:dev --prefix ./2024/day-1",
+		"2024:2:1": "npm run 1 --prefix ./2024/day-2",
+		"2024:2:1:dev": "npm run 1:dev --prefix ./2024/day-2",
+		"2024:2:2": "npm run 2 --prefix ./2024/day-2",
+		"2024:2:2:dev": "npm run 2:dev --prefix ./2024/day-2"
 	},
 	"type": "module",
 	"keywords": [],

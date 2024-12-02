@@ -4,7 +4,9 @@ export type NumberArray = number[]
 export type NumberArrayArray = number[][]
 
 // Get columns of values from file as arrays
-export const getValueArraysFromFile = (filePath: string): NumberArrayArray => {
+export const getColumnsFromInputAsArrays = (
+	filePath: string
+): NumberArrayArray => {
 	console.log('Getting values from file:', filePath)
 	let returnValues = [] as NumberArrayArray
 
