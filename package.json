@@ -1,0 +1,23 @@
+{
+	"name": "advent-of-code-2024-day-one",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"2024:day-one:puzzle-one": "npm run puzzle-one --prefix ./2024/day-one",
+		"2024:day-one:puzzle-two": "npm run puzzle-two --prefix ./2024/day-one"
+	},
+	"type": "module",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"nodemon": "^3.1.7"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^4.9.5"
+	}
+}
