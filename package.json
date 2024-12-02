@@ -4,8 +4,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"2024:day-one:puzzle-one": "npm run puzzle-one --prefix ./2024/day-one",
-		"2024:day-one:puzzle-two": "npm run puzzle-two --prefix ./2024/day-one"
+		"2024:1:1": "npm run 1 --prefix ./2024/1",
+		"2024:1:2": "npm run 2 --prefix ./2024/1"
 	},
 	"type": "module",
 	"keywords": [],
