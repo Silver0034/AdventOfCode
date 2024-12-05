@@ -19,9 +19,12 @@ const getDataAs2DArray = (
 }
 
 // Get the data from a file and return it as a 2D array of numbers
-const getDataAsNumber2DArray = (inputPath: string): number[][] | void => {
+const getDataAsNumber2DArray = (
+	inputPath: string,
+	separator: string | RegExp = /\s+/g
+): number[][] | void => {
 	// Get the data
-	const rows = getDataAs2DArray(inputPath)
+	const rows = getDataAs2DArray(inputPath, separator)
 	if (!rows) return
 
 	// cast the rows to numbers
