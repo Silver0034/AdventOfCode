@@ -7,17 +7,25 @@ const cast2DArrayToInts = (array: unknown[][]): number[][] => {
 	return array.map((row) => row.map((value) => parseInt(value as string)))
 }
 
-// Get the data from a file and return it as a 2D array of numbers
-const getDataAsNumber2DArray = (inputPath: string): number[][] | void => {
+const getDataAs2DArray = (
+	inputPath: string,
+	separator: string | RegExp = /\s+/g
+): string[][] | void => {
 	// Get the data
 	const data = readFile(inputPath)
 	if (!data) return
 
-	const rowsStrings = getRows(data)
-	if (!rowsStrings) return
+	return getRows(data, separator)
+}
+
+// Get the data from a file and return it as a 2D array of numbers
+const getDataAsNumber2DArray = (inputPath: string): number[][] | void => {
+	// Get the data
+	const rows = getDataAs2DArray(inputPath)
+	if (!rows) return
 
 	// cast the rows to numbers
-	return cast2DArrayToInts(rowsStrings)
+	return cast2DArrayToInts(rows)
 }
 
 // Get count of number of instances of a value in an array
@@ -118,6 +126,7 @@ const transpose2DArray = (rows: readonly unknown[][]): unknown[][] => {
 
 export {
 	cast2DArrayToInts,
+	getDataAs2DArray,
 	getDataAsNumber2DArray,
 	getInstanceCount,
 	getRows,

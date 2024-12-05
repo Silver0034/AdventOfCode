@@ -1,6 +1,7 @@
 import * as path from 'path'
 import {
 	cast2DArrayToInts,
+	getDataAs2DArray,
 	getDataAsNumber2DArray,
 	getInstanceCount,
 	getRows,
@@ -30,6 +31,26 @@ describe('Testing Day 1 > Functions > cast2DArrayToInts()', () => {
 		]
 
 		expect(cast2DArrayToInts(input)).toEqual(expectedOutput)
+	})
+})
+
+describe('Testing Day 1 > Functions > getDataAs2DArray()', () => {
+	test('Empty string should result in void', () => {
+		expect(getDataAs2DArray('')).toBeUndefined()
+	})
+
+	test('Should return a 2D array of strings from a file.', () => {
+		const inputPath = path.join(__dirname, '/input-sample.txt')
+		const expectedOutput = [
+			['3', '4'],
+			['4', '3'],
+			['2', '5'],
+			['1', '3'],
+			['3', '9'],
+			['3', '3']
+		]
+
+		expect(getDataAs2DArray(inputPath)).toEqual(expectedOutput)
 	})
 })
 
